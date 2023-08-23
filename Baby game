@@ -1,0 +1,183 @@
+local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/deeeity/mercury-lib/master/src.lua"))()
+
+local GUI = Mercury:Create{
+    Name = "ROLE PLAY! CLUB ROBLOX",
+    Size = UDim2.fromOffset(600, 400),
+    Theme = Mercury.Themes.Dark,
+    Link = "https://github.com/deeeity/mercury-lib"
+}
+
+local Tab = GUI:Tab{
+	Name = "Auto",
+	Icon = "rbxassetid://8569322835"
+}
+
+Tab:Button{
+	Name = "Auto take care of babies",
+	Description = "babies equipped have to be the 2nd in you babies slot and 3rd",
+	Callback = function()
+        while true do
+            _G.t = true
+            while _G.t do
+                local args = {
+                    [1] = 2,
+                    [2] = "Sleeping"
+                }
+        
+                game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("BabyEvents"):WaitForChild("RemoteChangeBabyMetrics"):FireServer(unpack(args))
+                wait(3)
+                _G.t = false
+            end
+        
+            _G.t22 = true
+            while _G.t22 do
+                local args = {
+                    [1] = 3,
+                    [2] = "Tumbler"
+                }
+        
+                game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("BabyEvents"):WaitForChild("RemoteChangeBabyMetrics"):FireServer(unpack(args))
+                wait(3)
+                _G.t22 = false
+            end
+        
+            _G.t222 = true
+            while _G.t222 do
+                local args = {
+                    [1] = 2,
+                    [2] = "Tumbler"
+                }
+        
+                game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("BabyEvents"):WaitForChild("RemoteChangeBabyMetrics"):FireServer(unpack(args))
+                wait(3)
+                _G.t222 = false
+            end
+        
+            _G.t3 = true
+            while _G.t3 do
+                local args = {
+                    [1] = 3,
+                    [2] = "Sleeping"
+                }
+        
+                game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("BabyEvents"):WaitForChild("RemoteChangeBabyMetrics"):FireServer(unpack(args))
+                wait(3)
+                _G.t3 = false
+            end
+        
+            _G.t33 = true
+            while _G.t33 do
+                local args = {
+                    [1] = 3,
+                    [2] = "Washing"
+                }
+        
+                game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("BabyEvents"):WaitForChild("RemoteChangeBabyMetrics"):FireServer(unpack(args))
+                wait(3)
+                _G.t33 = false
+            end
+        
+            _G.t33 = true
+            while _G.t33 do
+                local args = {
+                    [1] = 2,
+                    [2] = "Washing"
+                }
+        
+                game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("BabyEvents"):WaitForChild("RemoteChangeBabyMetrics"):FireServer(unpack(args))
+                wait(3)
+                _G.t33 = false
+            end
+        
+            while true do
+                local args = {
+                    [1] = 3,
+                    [2] = "Bread"
+                }
+        
+                game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("BabyEvents"):WaitForChild("RemoteChangeBabyMetrics"):FireServer(unpack(args))
+                wait(3)
+        
+                local args = {
+                    [1] = 2,
+                    [2] = "Bread"
+                }
+        
+                game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("BabyEvents"):WaitForChild("RemoteChangeBabyMetrics"):FireServer(unpack(args))
+                wait(3)
+            end
+        end
+        
+    end
+}
+
+local Tab = GUI:Tab{
+	Name = "Player",
+	Icon = "rbxassetid://8569322835"
+}
+Tab:Button{
+	Name = "Speed 100",
+	Description = nil,
+	Callback = function()
+        game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass"Humanoid".WalkSpeed = 100
+    end
+}
+local Tab = GUI:Tab{
+	Name = "Others",
+	Icon = "rbxassetid://8569322835"
+}
+Tab:Button{
+	Name = "Click tp",
+	Description = nil,
+	Callback = function() 
+    
+        loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Click%20Teleport.txt"))()end
+}
+
+Tab:Button{
+	Name = "Esp",
+	Description = nil,
+	Callback = function() 
+        loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/WRD%20ESP.txt"))()
+    end
+}
+
+
+Tab:Button{
+	Name = "infinite jump",
+	Description = nil,
+	Callback = function() 
+        loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Infinite%20Jump.txt"))()
+    end
+}
+
+local Tab = GUI:Tab{
+	Name = "custom",
+	Icon = "rbxassetid://8569322835"
+}
+Tab:ColorPicker{
+	Style = Mercury.ColorPickerStyles.Legacy,
+	Callback = function(color) end
+}
+GUI:Notification{
+	Title = "Toggle key",
+	Text = "You Can open or close the gui by pressing Delete",
+	Duration = 3,
+	Callback = function() end
+}
+GUI:Prompt{
+	Followup = false,
+	Title = "If you need any help",
+	Text = "or want a script contact golddeathninja02#9246 on discord",
+	Buttons = {
+		ok = function()
+			return true
+		end,
+		no = function()
+			return false
+		end,
+        nope = function()
+			return false
+		end
+	}
+}
