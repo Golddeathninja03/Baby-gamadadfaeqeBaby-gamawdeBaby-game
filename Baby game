@@ -111,6 +111,70 @@ Tab:Button{
     end
 }
 
+Tab:Button{
+	Name = "token farm",
+	Description = nil,
+	Callback = function()
+        _G.toggle = true while _G.toggle == true do
+        game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("Zoo"):WaitForChild("remoteTokens"):FireServer()
+        wait(0.01)
+    end
+    end
+}
+
+Tab:Button{
+	Name = "999 trillion  ",
+	Description = nil,
+	Callback = function()
+        local args = {
+            [1] = 999999999999999
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("Hospital"):WaitForChild("remoteTokens"):FireServer(unpack(args))
+        
+    end
+}
+
+Tab:Button{
+	Name = "Get Bandage",
+	Description = "Hospital",
+	Callback = function()
+        local args = {
+            [1] = "Bandage"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("Hospital"):WaitForChild("remotePickUp"):FireServer(unpack(args))
+        
+    end
+}
+
+
+Tab:Button{
+	Name = "Get Food",
+	Description = nil,
+	Callback = function()
+        local args = {
+            [1] = "Food"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("Zoo"):WaitForChild("remoteEquip"):FireServer(unpack(args))
+        
+    end
+}
+
+Tab:Button{
+	Name = "Get WaterBucket",
+	Description = nil,
+	Callback = function()
+        local args = {
+            [1] = "WaterBucket"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("Zoo"):WaitForChild("remoteEquip"):FireServer(unpack(args))
+        
+    end
+}
+
 local Tab = GUI:Tab{
 	Name = "Player",
 	Icon = "rbxassetid://8569322835"
